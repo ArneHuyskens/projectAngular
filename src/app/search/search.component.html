@@ -9,7 +9,6 @@
                 <mat-form-field appearance="standard" class="search-input">
                   <mat-label>Search</mat-label>
                   <input matInput [formControl]="searchControl" type="text" autocomplete="off" autofocus>
-                  <mat-hint>Movie title, keyword, ...</mat-hint>
                 </mat-form-field>
                 <button mat-fab class="search-button" (click)="refresh()">
                   <mat-icon>search</mat-icon>
@@ -21,17 +20,6 @@
           </mat-card>
         </div>
       </div>
-  
-      <div *ngIf="!Done">
-        <div class="row">
-          <div class="spinner">
-            <div class="dot1"></div>
-            <div class="dot2"></div>
-          </div>
-          <p class="text-center">Loading...</p>
-        </div>
-      </div>
-  
       <div *ngIf="Done">
         <div class="row">
           <div *ngFor="let movie of movies">

@@ -3,7 +3,7 @@
 }
 
 .search-input {
-  width: 520px;
+  width: 100%;
 }
 
 .search-button {
@@ -26,6 +26,10 @@ h5 {
 .link {
   cursor: pointer;
   width: 250px;
+}
+
+.ng-star-inserted {
+  width: fit-content;
 }
 
 .link img {

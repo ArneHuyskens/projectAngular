@@ -1,1 +1,21 @@
-<p>watchedlist works!</p>
+<div class="bg-gray-900 rounded-lg">
+    <div>
+        <div *ngFor="let item of movies" width="100%">
+            <div *ngIf="item.id != 1 && item.inWatched == true" class="p-5 border-solid border-2 border-sky-500">
+                <div class="grid grid-cols-7 firstLine">
+                    <img src="{{item.Poster}}" class="h-32 sm:col-span-1 col-span-2" alt="">
+                    <div class="DivForMiddle pl-3 pr-3 col-span-5"><p class="text-gray-400 text-xl ItemForMiddle md:text-2xl lg:text-3xl xl:text-4xl">{{item.Title}} <span class="font-bold">.</span> {{item.Year}}</p><br>
+                        <label for="review" class="text-white">Review: </label><p id="review" class="text-white">{{item.Reaction}}</p><br>
+                        <label for="Rating" class="text-white">Rating: </label><p id="rating" class="text-white">{{item.Rating}}</p>
+                    </div>
+                    <div class="sm:col-span-1 col-span-7 pl-0 sm:pl-3 h-full p-3">
+                            <div>
+                                <button (click)="removeMovieFromWatched(item)" class="ml-0 sm:ml-1 p-1 w-20 m-1 hover:bg-gray-500 text-white font-semibold border-gray-500 border-2 rounded">I didn't watch this movie!</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  

@@ -1,30 +1,16 @@
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" [routerLink]="'/'">
-      OMDB Movies
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
-      aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <ul>
+    <li><a [routerLink]="'/'">Home</a></li>
+    <li><a [routerLink]="'/watchlist'">Watchlist</a></li>
+    <li><a [routerLink]="'/watchedlist'">Watchedlist</a></li>
+  </ul>
 
-    <div class="collapse navbar-collapse" id="navbarToggler">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" [routerLink]="'/search'">Search</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
 </header>
 
 <router-outlet></router-outlet>
 
 <footer class="text-muted">
   <div class="container">
-    <p class="float-right">
-      <a href="#">Home</a>
-    </p>
     <p>Huyskens Arne 3APP-01</p>
   </div>
 </footer>
