@@ -14,12 +14,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule} from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
 import { MatIconModule} from '@angular/material/icon';
+import { WatchlistComponent } from './watchlist/watchlist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DetailsComponent,
-    SearchComponent
+    SearchComponent,
+    WatchlistComponent
   ],
   imports: [
     BrowserModule,

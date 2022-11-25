@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class AppService {
 
   readonly apikey = 'e46c042a';
-  readonly api = `https://www.omdbapi.com/?apikey=${this.apikey}`;
+  readonly api = `https://www.omdbapi.com/?apikey=${this.apikey}&type=movie&r=json`;
 
 
   constructor(private http: HttpClient) { }
