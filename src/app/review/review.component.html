@@ -1,0 +1,44 @@
+<main role="main">
+
+    <div class="container">
+      <div class="row">
+        <div class="ml-auto mr-auto">
+          <mat-card>
+            <table>
+              <tr>
+                <td>
+                  <div [ngSwitch]="dat?.Poster === 'N/A' || dat?.Poster !== 'N/A'">
+                    <img mat-card-imag class="img-responsive" *ngSwitchCase="dat?.Poster !== 'N/A'"
+                      src="{{dat?.Poster}}">
+                    <img mat-card-imag class="img-responsive" *ngSwitchCase="dat?.Poster === 'N/A'"
+                      src="https://placeimg.com/300/415/any">
+                  </div>
+                </td>
+                <td>
+                  <mat-card-header>
+                    <mat-card-title>{{ dat?.Title }} ({{ dat?.Year }})</mat-card-title>
+                  </mat-card-header>
+                  <mat-card-content>
+                    <form [formGroup]="reviewForm" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="rating">
+                            Rating
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="rating" type="text" placeholder="rating" [(ngModel)]="movieRating" formControlName="Rating">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="review">
+                            Review
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="review" type="text" placeholder="review" [(ngModel)]="movieReview" formControlName="Review">
+                        <button (click)="reviewMovie()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                            Review this movie
+                        </button>
+                    </form>
+                  </mat-card-content>
+                </td>
+              </tr>
+            </table>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  
+  </main>

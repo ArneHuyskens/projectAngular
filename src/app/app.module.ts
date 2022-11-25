@@ -15,13 +15,17 @@ import { MatButtonModule} from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
 import { MatIconModule} from '@angular/material/icon';
 import { WatchlistComponent } from './watchlist/watchlist.component';
+import { WatchedlistComponent } from './watchedlist/watchedlist.component';
+import { ReviewComponent } from './review/review.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DetailsComponent,
     SearchComponent,
-    WatchlistComponent
+    WatchlistComponent,
+    WatchedlistComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,

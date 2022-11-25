@@ -23,8 +23,6 @@ export class SearchComponent implements OnInit {
   constructor(private router: Router, private appService: AppService) { }
 
   ngOnInit() {
-    this.showHistory();
-
     this.searchControl.valueChanges
       .pipe(debounceTime(200))
       .subscribe(newValue => {
@@ -58,18 +56,6 @@ export class SearchComponent implements OnInit {
         }
       }
     })
-  }
-
-  showHistory() {
-    try {
-      const history = JSON.parse(localStorage.getItem(this.histkey))
-      if (history.length > 0) {
-        this.message = `Showing last 5`;
-        this.movies = history;
-      }
-    } catch (e) {
-      console.log(e)
-    }
   }
 
   gotoDetails(dat) {
